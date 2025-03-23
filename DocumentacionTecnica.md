@@ -1,9 +1,13 @@
 Documentación Técnica
+
 Propósito del Proyecto
+
 El propósito de este proyecto es entrenar un modelo de Machine Learning utilizando el algoritmo Random Forest para predecir una variable basada en ciertos datos de entrada, en este caso, la cantidad de intentos de inicio de sesión de un usuario. La implementación de este modelo está realizada en Python y se ha desplegado como una API RESTful utilizando el framework FastAPI. El modelo está cargado en un archivo random_forest_model.pkl y se puede utilizar para realizar predicciones a través de un servicio web.
+
 El modelo de Machine Learning fue entrenado previamente utilizando un conjunto de datos que contiene características relacionadas con intentos de inicio de sesión de usuarios, y la API expone un endpoint que permite a los usuarios enviar datos de entrada y recibir las predicciones en tiempo real.
+
 Estructura del Código
-La estructura del código del proyecto es la siguiente:
+
 project_folder/
 │
 ├── app.py                     # Archivo principal de la aplicación FastAPI
@@ -11,7 +15,9 @@ project_folder/
 ├── requirements.txt           # Archivo con las dependencias del proyecto
 ├── README.md                  # Documentación general del proyecto
 └── DOCUMENTACION.md           # Documentación técnica detallada
+
 Descripción de los Archivos:
+
 •	app.py: Este es el archivo que contiene la lógica principal de la API. En él se cargan las dependencias necesarias, se carga el modelo entrenado con joblib, y se define el endpoint para recibir las solicitudes de predicción.
 •	random_forest_model.pkl: Este es el archivo que contiene el modelo de Machine Learning que ha sido entrenado previamente y guardado usando joblib.
 •	requirements.txt: Contiene las dependencias necesarias para ejecutar el proyecto. Se incluyen bibliotecas como FastAPI, Uvicorn, Joblib y Numpy.
